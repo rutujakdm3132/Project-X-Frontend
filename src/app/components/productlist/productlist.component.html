@@ -1,0 +1,28 @@
+
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Product Id</th>
+                        <th>Product Name</th>
+                        <th>Product Category</th>
+                        <th>Area</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let p of products | async">
+                        <td>{{p.pId}}</td>
+                        <td>{{p.pCompany}}</td>
+                        <td>{{p.category}}</td>
+                        <td>{{p.city}}</td>
+    
+                         <td><!--<button (click)="deletePlayer(p.playerId)"  class="btn btn-danger">Delete</button> -->
+                            <button (click)="productDetail(p.pId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                            <!-- <button (click)="updatePlayer(p.playerId)" class="btn btn-info" style="margin-left: 10px">Update</button> -->
+                        </td>
+                    </tr>
+                </tbody>
+    
+            </table>
+        </div>
+   

@@ -1,0 +1,54 @@
+<div class="container">
+    <div [hidden]="submitted" style="width: 400px;">
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <h3>Product Details</h3>
+                <label for="name">Product Name</label>
+                <input type="text" class="form-control" id="id" required [(ngModel)]="product.pCompany" name="productname">
+            </div>
+            <div class="form-group">
+                <label for="model">Model</label>
+                <input type="text" class="form-control" id="model" required [(ngModel)]="product.pModel" name="model">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="Price" required [(ngModel)]="product.price" name="Price">
+            </div>
+            <div class="form-group">
+                <label for="Description">Description</label>
+                <input type="text" class="form-control" id="Description" required [(ngModel)]="product.pDescription" name="Description">
+            </div>
+            <div class="form-group">
+                <label for="photos">Photos</label>
+                <input type="text" class="form-control" id="Photos" required [(ngModel)]="product.photos" name="Photos">
+            </div>
+            <div class="form-group">
+                <label for="category">Catagory</label>
+                <input type="text" class="form-control" id="Catagory" required [(ngModel)]="product.category" name="Catagory">
+            </div>
+            <h3>Sellers Details</h3>
+            <div class="form-group">
+                <label for="fullname">Fullname</label>
+                <input type="text" class="form-control" id="fullname" required [(ngModel)]="product.fullName" name="fullname">
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input type="text" class="form-control" id="mobile" required [(ngModel)]="product.mobile" name="mobile">
+            </div>
+            
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" class="form-control" id="city" required [(ngModel)]="product.city" name="city">
+            </div>
+    
+            <button type="submit" class="btn btn-success">Add Product</button>
+        </form>
+        
+        
+        <div [hidden]="!submitted">
+            <h4>You submitted successfully!</h4>
+        
+        </div>
+        
+    </div>
+    </div>

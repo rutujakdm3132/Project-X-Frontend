@@ -1,0 +1,49 @@
+<div class="container">
+
+    <div *ngIf="product">
+        <h3>Product Details</h3>
+        <div>
+            <label><b>Product Id:  </b></label>   {{product.pId}}
+        </div>
+    
+        <div>
+    
+    <label><b>Product name:  </b></label>   {{product.pCompany}}
+        </div>
+        <div>
+    
+     <label><b>Product Price:  </b></label> <b>₹</b>  {{product.price}}
+          </div>
+        <div>
+    
+         <label><b>Product Description: </b></label>   {{product.pDescription}}
+          </div>
+          <div>
+    
+             <label><b>Product Photo: </b></label>   {{product.photos}}
+             </div>
+            <div>
+    
+    
+                <label><b>Product Category:  </b></label>   {{product.category}}
+                    </div>
+                    <br><br>
+                    <h3>Seller's Details</h3>
+                    
+                    <div>
+                        <label><b>Product seller's Name:  </b></label>   {{product.fullName}}
+                            </div>
+                    <div>
+    
+                        <div>
+                            <label><b>Product seller's Contact no.:  </b></label>   {{product.mobile}}
+                                
+                        </div>
+                        <label><b>Product seller's Area:  </b></label>   {{product.city}}
+                            </div>
+    </div>
+    <br>
+    <br>
+    <button (click)="list()" class="btn btn-primary">Back to Productlist</button>
+
+</div>
